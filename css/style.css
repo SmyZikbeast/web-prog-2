@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-list {
+    table-layout: fixed;
+    
+}
+
+.header-list th {
+    font-size:30px;
+}
+
+.header-list td {
+    font-style: italic;
+    color: #ff00d9;
+    font-size: 28px;
+}
+
+.x-option {
+    padding: 10% 20%;
+    
+}
+
+.option-label {
+    font-size: 40px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding-left: 1%;
+}
+
+.r-option {
+    padding: 10% 20%;
+}
+
+input[type="checkbox"] {
+    margin-right: 10%;
+}
+
+.x-button {
+    width: 40px;
+}
+
+.text-input {
+    padding: 1% 0;
+    margin-left: 3%;
+}
+
+.submit-button {
+    width: 60px;
+}
+
+#result-table {
+    table-layout: fixed;
+}
+
+.left-table {
+    vertical-align: top;
+}

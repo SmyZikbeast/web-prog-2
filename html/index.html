@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css"></link>
+    <script src="../js/main.js" type="module" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <table width="100%" border="0">
+        <tr>
+            <td colspan=3 width="100%">
+                <table class=header-list width="100%">
+                    <tr height=30px>
+                        <th align = "center">Имя</th>
+                        <th align = "center">Группа</th>
+                        <th align = "center">Вариант</th>
+                    </tr>
+                    <tr>
+                        <td align = "center">Башлачёв А.П.</td>
+                        <td align = "center">P3231</td>
+                        <td align = "center">22687</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr height="100px">
+
+        </tr>
+        <tr>
+            <td width="30%" class="left-table">
+                <table>
+                    <tr>
+                        <td>
+                            <form action="#" method="POST" id="form">
+                                <table width="100%">
+                                    <tr height="30px">
+                                        <td class="option-label"> X </td>
+                                        <td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td>
+                                                        <td> <label class="x-option"> <input class="x-button" type="button" name="x" value=-5> </input> </label> </td>
+                                                        <td> <label class="x-option"> <input class="x-button" type="button" name="x" value=-4> </input> </label> </td>
+                                                        <td> <label class="x-option"> <input class="x-button" type="button" name="x" value=-3> </input> </label> </td>
+                                                        <td> <label class="x-option"> <input class="x-button" type="button" name="x" value=-2> </input> </label> </td>
+                                                        <td> <label class="x-option"> <input class="x-button" type="button" name="x" value=-1> </input> </label> </td>
+                                                        <td> <label class="x-option"> <input class="x-button" type="button" name="x" value=0> </input> </label> </td>
+                                                        <td> <label class="x-option"> <input class="x-button" type="button" name="x" value=1> </input> </label> </td>
+                                                        <td> <label class="x-option"> <input class="x-button" type="button" name="x" value=2> </input> </label> </td>
+                                                        <td> <label class="x-option"> <input class="x-button" type="button" name="x" value=3> </input> </label> </td>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="option-label"> Y </td>
+                                        <td>
+                                            <input type="text" id="y-text" class="text-input" placeholder=" -5...5"> </input>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="option-label"> R </td>
+                                        <td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td> <label class="r-option"> <input class="r-check" type="checkbox" name="r1" value=1>1</label></td>
+                                                    <td> <label class="r-option"> <input class="r-check" type="checkbox" name="r2" value=2>2</label></td>
+                                                    <td> <label class="r-option"> <input class="r-check" type="checkbox" name="r3" value=3>3</label></td>
+                                                    <td> <label class="r-option"> <input class="r-check" type="checkbox" name="r4" value=4>4</label></td>
+                                                    <td> <label class="r-option"> <input class="r-check" type="checkbox" name="r5" value=5>5</label></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td align="center">
+                                            <button type="submit">submit</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr height="100px">
+                        <td align="center">
+                            <p id="error-field"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%" id="result-table" border="1px">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>X</th>
+                                        <th>Y</th>
+                                        <th>R</th>
+                                        <th>submit time</th>
+                                        <th>result</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="result-table-body">
+
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td width="10%">
+
+            </td> 
+
+            <td width="60%">
+                <canvas id="graph" height="800" width="800">
+
+                </canvas>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
