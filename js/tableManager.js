@@ -13,9 +13,12 @@ let x;
 let y;
 let r;
 function addNewLine(x,y,r){
-    let submit = get(x,y,r);
-    put(submit);
-    addLine(submit);
+    let submit = get(x,y,r).then((data) => {
+        if (data) {
+            put(submit);
+            addLine(submit);
+        }
+    });
 }
 
 function addLine(submit){

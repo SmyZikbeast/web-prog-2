@@ -45,6 +45,10 @@ input[type="checkbox"] {
     width: 40px;
 }
 
+.x-button:hover {
+    background-color:#0033a3;
+}
+
 .text-input {
     padding: 1% 0;
     margin-left: 3%;
