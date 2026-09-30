@@ -12,7 +12,7 @@ let rows = 0;
 let x;
 let y;
 let r;
-
+let selectedRow;
 async function addNewLine(x,y,r){
     let submit = await submit_point(x, y, r);
     put(submit);
@@ -66,7 +66,7 @@ export function handleTable(){
     }
     )
     table.addEventListener('click', (event) => {
-        n = event.target.closest('td').closest('tr').rowIndex;
+        let n = event.target.closest('td').closest('tr').rowIndex;
         selectedRow = table.rows[n];
     })
 }
@@ -98,7 +98,9 @@ function checkTimezone(){
 function drawNewPoint(){
     clear();
     draw();
-    drawPointSelected(selectedRow);
+    if (selectedRow){
+        drawPointSelected(selectedRow);
+    }
     let last = getLast();
     if(last){
         drawPoint(last.x, last.y, last.r, 'red');
