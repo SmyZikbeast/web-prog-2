@@ -17,7 +17,7 @@ export function getLastId(){
     if (get().length == 0){
         return 0;
     }
-    return Math.max(...get().map(item => item.id));
+    return Math.max(...get().map(item => item.id)) || 0;
 }
 
 export function getLast(){
