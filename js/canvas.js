@@ -63,12 +63,12 @@ function drawFigure(){
     ctx.strokeStyle = 'black';
     ctx.beginPath();
     ctx.moveTo(0,0);
-    ctx.arc(0, 0, radius, Math.PI, 1.5*Math.PI);
+    ctx.arc(0, 0, radius, 0, 0,5*Math.PI);
     ctx.lineTo(0,0);
+    ctx.lineTo(-radius, 0);
+    ctx.lineTo(-radius, -radius/2);
+    ctx.lineTo(0, -radius/2);
     ctx.lineTo(radius, 0);
-    ctx.lineTo(0, radius);
-    ctx.lineTo(-radius/2, radius);
-    ctx.lineTo(-radius/2, 0);
     ctx.closePath();
     ctx.stroke();
     ctx.fill();

@@ -48,8 +48,7 @@ export function handleTable(){
     updateTable();
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        getCheckbox('.r-check', updateR);
-        getText('y-text', updateY, -5, 5);
+        getText('y-text', updateY, -3, 3);
         console.log("x = " + x + " y = " + y + " r = " + r);
         if (x == null){
             error.innerText = 'wrong x value';
@@ -110,4 +109,5 @@ function updateR(value){
 
 addButton('.x-button', updateX);
 addText('y-text');
+addButton('.r-button', updateR);
 setInterval(checkTimezone, 500);
