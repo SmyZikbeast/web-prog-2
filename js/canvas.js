@@ -66,8 +66,8 @@ function drawFigure(){
     ctx.arc(0, 0, radius, 0, 0,5*Math.PI);
     ctx.lineTo(0,0);
     ctx.lineTo(-radius, 0);
-    ctx.lineTo(-radius, -radius/2);
-    ctx.lineTo(0, -radius/2);
+    ctx.lineTo(-radius, radius/2);
+    ctx.lineTo(0, radius/2);
     ctx.lineTo(radius, 0);
     ctx.closePath();
     ctx.stroke();
