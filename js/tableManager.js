@@ -81,9 +81,8 @@ function updateTable(){
     })
 }
 
-function drawPointSelected(rowNumber){
+function drawPointSelected(){
     let row = selectedRow;
-    console.log(row.cells[1]);
     drawPoint(row.cells[1], row.cells[2], row.cells[3], 'green');
 }
 
@@ -102,7 +101,8 @@ function drawNewPoint(){
     clear();
     draw();
     if (selectedRow){
-        drawPointSelected(selectedRow);
+        drawPointSelected();
+        console.log(1);
     }
     let last = getLast();
     if(last){
