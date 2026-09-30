@@ -8,7 +8,7 @@ export function submit_point(x, y, r){
 }
 
 async function post(id,x,y,r) {
-    let url = "fcgi-bin/server.jar?";   
+    let url = "/fcgi-bin/server.jar?";   
     let result = await fetch(url, {
         method: 'POST',
         headers: {
