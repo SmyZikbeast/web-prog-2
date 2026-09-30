@@ -1,5 +1,5 @@
-import {addButton, getCheckbox, getText, addText} from './inputs.js';
-import {put, get, getLastId, getLast} from './storage.js';
+import {addButton, getText, addText} from './inputs.js';
+import {put, get, getLast} from './storage.js';
 import {drawPoint, clear, draw} from './canvas.js';
 import {submit_point} from './tableService.js';
 const form = document.getElementById('form')
