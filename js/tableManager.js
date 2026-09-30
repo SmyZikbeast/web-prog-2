@@ -83,7 +83,7 @@ function updateTable(){
 
 function drawPointSelected(rowNumber){
     let row = selectedRow;
-    drawPoint(row[1], row[2], row[3], 'green');
+    drawPoint(row.cells[1], row.cells[2], row.cells[3], 'green');
 }
 
 let timezone = new Date().getTimezoneOffset();
