@@ -30,7 +30,7 @@ function addLine(submit){
     newRow.insertCell(1).textContent = submit.x;
     newRow.insertCell(2).textContent = submit.y;
     newRow.insertCell(3).textContent = submit.r;
-    let time = new Date(submit.time.slice(0,23));
+    let time = new Date(submit.localtime.slice(0,23));
     newRow.insertCell(4).textContent = time.toLocaleString('ru-RU', {
     year: 'numeric',
     month: '2-digit',
@@ -40,7 +40,7 @@ function addLine(submit){
     second: '2-digit',
     hour12: false
 });
-    newRow.insertCell(5).textContent = time;
+    newRow.insertCell(5).textContent = submit.time;
     newRow.insertCell(6).textContent = submit.result;
 }
 
