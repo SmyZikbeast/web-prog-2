@@ -1,9 +1,8 @@
 import {getLastId} from './storage.js';
 import Point from './point.js';
 import Submittion from './submittion.js';
-var id = getLastId();
 export async function submit_point(x, y, r){
-    id++;
+    let id = getLastId() + 1;
     let data = await post(id, x, y, r);
     let submission = new Submittion(
     data.id,
