@@ -65,6 +65,10 @@ export function handleTable(){
         }
     }
     )
+    table.addEventListener('click', (event) => {
+        n = event.target.closest('td').closest('tr').rowIndex;
+        selectedRow = table.rows[n];
+    })
 }
 
 function updateTable(){
@@ -73,6 +77,11 @@ function updateTable(){
     get().forEach((submittion) => {
         addLine(submittion);
     })
+}
+
+function drawPointSelected(rowNumber){
+    let row = selectedRow;
+    drawPoint(row[1], row[2], row[3], 'green');
 }
 
 let timezone = new Date().getTimezoneOffset();
@@ -89,9 +98,10 @@ function checkTimezone(){
 function drawNewPoint(){
     clear();
     draw();
+    drawPointSelected(selectedRow);
     let last = getLast();
     if(last){
-        drawPoint(last.x, last.y, last.r);
+        drawPoint(last.x, last.y, last.r, 'red');
     }
 }
 

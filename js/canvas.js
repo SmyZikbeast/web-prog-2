@@ -74,10 +74,10 @@ function drawFigure(){
     ctx.fill();
 }
 
-export function drawPoint(x,y,r){
+export function drawPoint(x,y,r, color){
     ctx.beginPath();
     ctx.arc(radius * x / r, -radius * y / r, 5, 0 ,Math.PI*2);
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = color;
     ctx.fill();
     ctx.closePath();
 }
