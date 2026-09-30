@@ -40,7 +40,7 @@ function addLine(submit){
     second: '2-digit',
     hour12: false
 });
-    newRow.insertCell(5).textContent = submit.time;
+    newRow.insertCell(5).textContent = time;
     newRow.insertCell(6).textContent = submit.result;
 }
 
