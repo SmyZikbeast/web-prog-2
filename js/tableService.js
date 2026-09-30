@@ -1,4 +1,5 @@
 import {getLastId} from './storage.js';
+import Point from './point.js';
 var id = getLastId();
 export function submit_point(x, y, r){
     id++;
