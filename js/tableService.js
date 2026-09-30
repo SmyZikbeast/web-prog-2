@@ -8,7 +8,7 @@ export function submit_point(x, y, r){
 }
 
 async function post(id,x,y,r) {
-    let url = "se.ifmo.ru:22887";   
+    let url = "localhost:22887";   
     let result = await fetch(url, {
         method: 'POST',
         headers: {
