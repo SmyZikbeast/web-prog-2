@@ -9,7 +9,7 @@ export async function submit_point(x, y, r){
     data.x,
     data.y,
     data.r,
-    data.localtime.slice(0,23),
+    data.localtime,
     data.time,
     data.result
 );
