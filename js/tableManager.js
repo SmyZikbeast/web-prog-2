@@ -102,7 +102,6 @@ function drawNewPoint(){
     draw();
     if (selectedRow){
         drawPointSelected();
-        console.log(1);
     }
     let last = getLast();
     if(last){
