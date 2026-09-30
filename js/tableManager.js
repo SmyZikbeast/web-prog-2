@@ -108,6 +108,6 @@ function updateR(value){
 }
 
 addButton('.x-button', updateX);
-addText('y-text');
+addText('y-text', -3, 3);
 addButton('.r-button', updateR);
 setInterval(checkTimezone, 500);
