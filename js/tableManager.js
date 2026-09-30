@@ -68,8 +68,6 @@ export function handleTable(){
     table.addEventListener('click', (event) => {
         let n = event.target.closest('td').closest('tr').rowIndex;
         selectedRow = table.rows[n];
-        console.log(n);
-        console.log(selectedRow);
     })
 }
 
