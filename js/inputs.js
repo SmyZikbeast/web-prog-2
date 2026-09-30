@@ -1,3 +1,4 @@
+const error = document.getElementById('error-field');
 export function addButton(varName, callback){
     const inputs = document.querySelectorAll(varName);
     inputs.forEach((input) => {
@@ -34,13 +35,17 @@ export function getText(varName, callback, min, max){
     }
 }
 
-export function addText(varName){
+export function addText(varName, min, max){
     const input = document.getElementById(varName);
     input.addEventListener('input', (event) => {
         if (input.value.length > 10){
             input.style.color = 'red';
+            error.textContent = "wrong y length";
         } else {
             input.style.color = 'black';
+        }
+        if (input.value < min || input.value > max){
+            error.textContent = "wrong y value";
         }
     })
 }
