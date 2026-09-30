@@ -73,3 +73,16 @@ function drawFigure(){
     ctx.stroke();
     ctx.fill();
 }
+
+export function drawPoint(x,y,r){
+    ctx.beginPath();
+    ctx.arc(radius * x / r, -radius * y / r, 5, 0 ,Math.PI*2);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+    ctx.closePath();
+}
+
+export function clear(){
+    ctx.reset();
+    ctx.translate(canvas.clientWidth/2, canvas.clientHeight/2);
+}

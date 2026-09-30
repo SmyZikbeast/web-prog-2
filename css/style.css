@@ -45,23 +45,34 @@ input[type="checkbox"] {
     width: 40px;
 }
 
-.x-button:hover {
-    background-color:#0033a3;
-}
 
 .text-input {
     padding: 1% 0;
     margin-left: 3%;
 }
 
-.submit-button {
+#submit-button {
     width: 60px;
+}
+
+#submit-button:hover {
+    background-color: rgb(125, 238, 125);
 }
 
 #result-table {
     table-layout: fixed;
+    word-break: break-all;
 }
 
 .left-table {
     vertical-align: top;
+}
+
+.option-label::after {
+    content:"*";
+    color:red;
+}
+
+.wide-col {
+    width: 84px;
 }

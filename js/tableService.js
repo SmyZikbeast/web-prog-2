@@ -1,0 +1,18 @@
+import {getLastId} from './storage.js';
+var id = getLastId();
+export function submit(x, y, r){
+    id++;
+    let result = post(id, x, y, r);
+    return result;
+}
+
+async function post(id,x,y,r) {
+    let url = "se.ifmo.ru:22112";   
+    let result = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(new Point(id, x, y, r))
+    });
+}

@@ -1,7 +1,6 @@
-import {addButton, getCheckbox, getText} from './inputs.js';
-import {put, getTable, getLastId} from './storage.js';
-import submittion from './submittion.js';
-import {get, post} from './checker.js';
+import {addButton, getCheckbox, getText, addText} from './inputs.js';
+import {put, get, getLastId, getLast} from './storage.js';
+import {drawPoint, clear, draw} from './canvas.js';
 const form = document.getElementById('form')
 const table = document.getElementById('result-table');
 const tbody = document.getElementById('result-table-body');
@@ -12,13 +11,12 @@ let rows = 0;
 let x;
 let y;
 let r;
+let id = getLastId();
 function addNewLine(x,y,r){
-    let submit = get(x,y,r).then((data) => {
-        if (data) {
-            put(submit);
-            addLine(submit);
-        }
-    });
+    id++;
+    let submit = submit(id,x,y,r);
+    put(submit);
+    addLine(submit);
 }
 
 function addLine(submit){
@@ -27,11 +25,12 @@ function addLine(submit){
         table.deleteRow(MAX_ROWS);
     }
     const newRow = tbody.insertRow(0);
-    let time = new Date(submit.localtime);
+    
     newRow.insertCell(0).textContent = submit.id;
     newRow.insertCell(1).textContent = submit.x;
     newRow.insertCell(2).textContent = submit.y;
     newRow.insertCell(3).textContent = submit.r;
+    let time = new Date(submit.time);
     newRow.insertCell(4).textContent = time.toLocaleString('ru-RU', {
     year: 'numeric',
     month: '2-digit',
@@ -42,7 +41,6 @@ function addLine(submit){
     hour12: false
 });
     newRow.insertCell(5).textContent = submit.result;
-    newRow.insertCell(6).textContent = submit.time;
 }
 
 export function handleTable(){
@@ -56,10 +54,13 @@ export function handleTable(){
             error.innerText = 'wrong x value';
         } else if (y == null){
             error.innerText = 'wrong y value';
+        } else if (y == 'wrong length'){
+            error.innerText = 'wrong y length';
         } else if (r == null){
             error.innerText = 'wrong r value';
         } else {
             addNewLine(x,y,r);
+            drawNewPoint();
             error.innerText = '';
         }
     }
@@ -69,7 +70,7 @@ export function handleTable(){
 function updateTable(){
     rows = 0;
     tbody.innerHTML = '';
-    getTable().forEach((submittion) => {
+    get().forEach((submittion) => {
         addLine(submittion);
     })
 }
@@ -82,6 +83,13 @@ function checkTimezone(){
         timezone = newTimezone;
         updateTable();
     }
+    drawNewPoint();
+}
+
+function drawNewPoint(){
+    clear();
+    draw();
+    drawPoint(getLast().x, getLast().y, getLast().r);
 }
 
 function updateX(value){
@@ -97,4 +105,5 @@ function updateR(value){
 }
 
 addButton('.x-button', updateX);
+addText('y-text');
 setInterval(checkTimezone, 500);

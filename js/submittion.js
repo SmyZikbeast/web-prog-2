@@ -1,11 +1,11 @@
 export default class submittion{
-    constructor(id, x, y, r, localtime, result, time){
+    constructor(id, x, y, r, localtime, time, result){
         this.id = id;
         this.x = x;
         this.y = y;
         this.r = r;
         this.localtime = localtime;
-        this.result = result;
         this.time = time;
+        this.result = result;
     }
 }
