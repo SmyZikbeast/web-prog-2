@@ -1,4 +1,4 @@
-export default class submittion{
+export default class Submittion{
     constructor(id, x, y, r, localtime, time, result){
         this.id = id;
         this.x = x;
