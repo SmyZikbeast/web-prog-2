@@ -1,6 +1,7 @@
 import {addButton, getCheckbox, getText, addText} from './inputs.js';
 import {put, get, getLastId, getLast} from './storage.js';
 import {drawPoint, clear, draw} from './canvas.js';
+import {submit_point} from './tableService.js';
 const form = document.getElementById('form')
 const table = document.getElementById('result-table');
 const tbody = document.getElementById('result-table-body');
@@ -14,7 +15,7 @@ let r;
 let id = getLastId();
 function addNewLine(x,y,r){
     id++;
-    let submit = submit(id,x,y,r);
+    let submit = submit_point(x, y, r);
     put(submit);
     addLine(submit);
 }
