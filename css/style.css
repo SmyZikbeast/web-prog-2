@@ -45,6 +45,9 @@ input[type="checkbox"] {
     width: 40px;
 }
 
+.r-button {
+    width: 40px;
+}
 
 .text-input {
     padding: 1% 0;
