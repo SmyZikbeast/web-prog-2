@@ -80,6 +80,7 @@ export function drawPoint(x,y,r, color){
     ctx.fillStyle = color;
     ctx.fill();
     ctx.closePath();
+    console.log(x,y,r,color);
 }
 
 export function clear(){
