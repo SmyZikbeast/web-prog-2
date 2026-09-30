@@ -83,6 +83,7 @@ function updateTable(){
 
 function drawPointSelected(rowNumber){
     let row = selectedRow;
+    console.log(row.cells[1]);
     drawPoint(row.cells[1], row.cells[2], row.cells[3], 'green');
 }
 
