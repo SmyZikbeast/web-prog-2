@@ -43,7 +43,7 @@ export function addText(varName, min, max){
             error.textContent = "wrong y length";
         } else {
             input.style.color = 'black';
-            input.textContent = "";
+            error.textContent = "";
         }
 
         if (+input.value < min || +input.value > max){
